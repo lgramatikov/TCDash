@@ -16,4 +16,6 @@ with https://github.com/tcplugins/tcWebHooks. Still have to test this with real 
 
 4. AllJoyn server, just for fun.
 
+5. Azure Application Insights for monitoring and exceptions log. Surprisingly, AI works fine on Raspberry.
+
 And I know, that the code needs pretty big refactoring before it can be called "usable" or "stable".
