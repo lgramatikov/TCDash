@@ -1,0 +1,11 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node name="/org/laz/tc/dashboard">
+	<interface name="org.laz.TCDashboardInterface">
+		<method name="GoFunky">
+			<arg name="success" type="b" direction="out"/>
+		</method>
+		<method name="GoBoring">
+			<arg name="success" type="b" direction="out"/>
+		</method>
+	</interface>
+</node>

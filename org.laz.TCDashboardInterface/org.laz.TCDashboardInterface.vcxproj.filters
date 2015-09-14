@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resources">
+      <UniqueIdentifier>d0ea06ce-86a8-4502-a279-f323deeb0044</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tga;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="AllJoynBusObjectManager.cpp" />
+    <ClCompile Include="AllJoynHelpers.cpp" />
+    <ClCompile Include="TCDashboardInterfaceConsumer.cpp" />
+    <ClCompile Include="TCDashboardInterfaceProducer.cpp" />
+    <ClCompile Include="TCDashboardInterfaceServiceEventAdapter.cpp" />
+    <ClCompile Include="TCDashboardInterfaceServiceEventArgs.cpp" />
+    <ClCompile Include="TCDashboardInterfaceSignals.cpp" />
+    <ClCompile Include="TCDashboardInterfaceWatcher.cpp" />
+    <ClCompile Include="TypeConversionHelpers.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="AllJoynBusObjectManager.h" />
+    <ClInclude Include="AllJoynHelpers.h" />
+    <ClInclude Include="ITCDashboardInterfaceService.h" />
+    <ClInclude Include="TCDashboardInterfaceConsumer.h" />
+    <ClInclude Include="TCDashboardInterfaceEventArgs.h" />
+    <ClInclude Include="TCDashboardInterfaceMethodResults.h" />
+    <ClInclude Include="TCDashboardInterfaceProducer.h" />
+    <ClInclude Include="TCDashboardInterfaceServiceEventAdapter.h" />
+    <ClInclude Include="TCDashboardInterfaceServiceEventArgs.h" />
+    <ClInclude Include="TCDashboardInterfaceSignals.h" />
+    <ClInclude Include="TCDashboardInterfaceStructures.h" />
+    <ClInclude Include="TCDashboardInterfaceWatcher.h" />
+    <ClInclude Include="TypeConversionHelpers.h" />
+  </ItemGroup>
+</Project>
