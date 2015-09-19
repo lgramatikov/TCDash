@@ -33,7 +33,7 @@
 
 
     </Grid>-->
-
+    <!--<StackPanel>-->
     <Grid Padding="5" x:Name="BuildsGrid">
         <ProgressBar x:Name="LoadingBar" Visibility="Visible" IsEnabled="True" IsIndeterminate="True" Height="4" HorizontalAlignment="Stretch"/>
         <Grid.RowDefinitions>
@@ -85,5 +85,11 @@
         <Rectangle Fill="Yellow" Grid.Row="1" Grid.Column="1" Margin="5"/>
         <Rectangle Fill="Aquamarine" Grid.Row="2" Grid.Column="2" Margin="5"/>-->
     </Grid>
-
+        <!--<StackPanel Orientation="Horizontal">
+        <Button x:Name="btnGoBoring" Content="Go boring" Click="btnGoBoring_Click" />
+            <Button x:Name="btnGoFunky" Content="Go funky" Click="btnGoFunky_Click" />
+        --><!--<Button x:Name="btnMovementOn" Content="Movement on" Click="btnMovementOn_Click"/>
+        <Button x:Name="btnMovementOff" Content="Movement Off" Click="btnMovementOff_Click" />--><!--
+        </StackPanel>
+    </StackPanel>-->
 </Page>

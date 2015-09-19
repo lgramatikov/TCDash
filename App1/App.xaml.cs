@@ -1,4 +1,5 @@
 ﻿using ClassLibrary1;
+using Microsoft.ApplicationInsights;
 using System;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
@@ -21,6 +22,9 @@ namespace App1
         /// </summary>
         public App()
         {
+            // Add this initilization line.
+            WindowsAppInitializer.InitializeAsync();
+
             this.InitializeComponent();
             this.Suspending += OnSuspending;
 

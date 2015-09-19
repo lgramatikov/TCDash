@@ -12,6 +12,7 @@ using ClassLibrary1;
 using Newtonsoft.Json;
 using System.Threading.Tasks;
 using System.Net.Http.Headers;
+using Microsoft.ApplicationInsights;
 
 // The Background Application template is documented at http://go.microsoft.com/fwlink/?LinkID=533884&clcid=0x409
 
@@ -23,8 +24,11 @@ namespace BackgroundApplication2
         BackgroundTaskDeferral serviceDeferral;
         ThreadPoolTimer timer;
 
-        private const string serverHost = "";
-        private const string basicAuthString = "";
+        private const string serverHost = "http://10.10.9.122:8888"; // "http://sof-sc-bld.nl.ad.virtual-affairs.com:8888"; 
+        private const string basicAuthString = "cm9ib3RidWlsZG1hc3RlcjpnIm1de01rbng1TWFXOWU=";
+
+        private TelemetryClient tc = new TelemetryClient();
+        private const string AI_KEY = "4105be01-83a6-4371-a412-7c05dd329729";
 
         public void Run(IBackgroundTaskInstance taskInstance)
         {
@@ -36,6 +40,11 @@ namespace BackgroundApplication2
                 appServiceConnection = appService.AppServiceConnection;
                 appServiceConnection.RequestReceived += OnRequestReceived;
             }
+
+            tc.InstrumentationKey = AI_KEY;
+
+            // Set session data:
+            tc.Context.Session.Id = Guid.NewGuid().ToString();
         }
 
         private void OnRequestReceived(AppServiceConnection sender, AppServiceRequestReceivedEventArgs args)
@@ -49,7 +58,7 @@ namespace BackgroundApplication2
                 Notify();
 
 #if DEBUG
-                this.timer = ThreadPoolTimer.CreatePeriodicTimer(Timer_Tick, TimeSpan.FromSeconds(20));
+                this.timer = ThreadPoolTimer.CreatePeriodicTimer(Timer_Tick, TimeSpan.FromMinutes(15)); //TimeSpan.FromSeconds(20));
 #else
                 this.timer = ThreadPoolTimer.CreatePeriodicTimer(Timer_Tick, TimeSpan.FromMinutes(15));
 #endif
@@ -145,6 +154,8 @@ namespace BackgroundApplication2
             {
                 Debug.Write(ex.Message);
                 Debug.Write(ex.HResult);
+                tc.TrackException(ex);
+                tc.Flush();
             }
             finally
             {

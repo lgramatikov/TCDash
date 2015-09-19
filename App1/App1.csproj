@@ -94,12 +94,16 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FunkyDashboardService.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -120,6 +124,7 @@
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="tcdash.xml" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -140,6 +145,10 @@
     <ProjectReference Include="..\ClassLibrary1\ClassLibrary1.csproj">
       <Project>{6818ac49-b293-4e22-ab94-6d7d4e662f67}</Project>
       <Name>ClassLibrary1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\org.laz.TCDashboardInterface\org.laz.TCDashboardInterface.vcxproj">
+      <Project>{80448969-5880-4360-8d3e-6c74e7faf317}</Project>
+      <Name>org.laz.TCDashboardInterface</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

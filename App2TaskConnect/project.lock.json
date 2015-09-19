@@ -3,6 +3,14 @@
   "version": 1,
   "targets": {
     "UAP,Version=v10.0": {
+      "Microsoft.ApplicationInsights/1.2.0": {
+        "compile": {
+          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.0.0": {
         "dependencies": {
           "System.Runtime": "[4.0.20, )",
@@ -1546,6 +1554,14 @@
       }
     },
     "UAP,Version=v10.0/win10-arm": {
+      "Microsoft.ApplicationInsights/1.2.0": {
+        "compile": {
+          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.0.0": {
         "dependencies": {
           "System.Runtime": "[4.0.20, )",
@@ -3179,6 +3195,14 @@
       }
     },
     "UAP,Version=v10.0/win10-arm-aot": {
+      "Microsoft.ApplicationInsights/1.2.0": {
+        "compile": {
+          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.0.0": {
         "dependencies": {
           "System.Runtime": "[4.0.20, )",
@@ -4784,6 +4808,14 @@
       }
     },
     "UAP,Version=v10.0/win10-x86": {
+      "Microsoft.ApplicationInsights/1.2.0": {
+        "compile": {
+          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.0.0": {
         "dependencies": {
           "System.Runtime": "[4.0.20, )",
@@ -6422,6 +6454,14 @@
       }
     },
     "UAP,Version=v10.0/win10-x86-aot": {
+      "Microsoft.ApplicationInsights/1.2.0": {
+        "compile": {
+          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.0.0": {
         "dependencies": {
           "System.Runtime": "[4.0.20, )",
@@ -8027,6 +8067,14 @@
       }
     },
     "UAP,Version=v10.0/win10-x64": {
+      "Microsoft.ApplicationInsights/1.2.0": {
+        "compile": {
+          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.0.0": {
         "dependencies": {
           "System.Runtime": "[4.0.20, )",
@@ -9665,6 +9713,14 @@
       }
     },
     "UAP,Version=v10.0/win10-x64-aot": {
+      "Microsoft.ApplicationInsights/1.2.0": {
+        "compile": {
+          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.0.0": {
         "dependencies": {
           "System.Runtime": "[4.0.20, )",
@@ -11271,6 +11327,24 @@
     }
   },
   "libraries": {
+    "Microsoft.ApplicationInsights/1.2.0": {
+      "sha512": "1WyfkRQc7aa2KObTCxfmS3ygUNRRvpjMWbn0xmQFzhZBbGzwzPZxldtARK5gbSzs7ohAhhcnnuJc8YQiHlZ/oA==",
+      "type": "Package",
+      "files": [
+        "_rels/.rels",
+        "Microsoft.ApplicationInsights.nuspec",
+        "lib/net40/Microsoft.ApplicationInsights.dll",
+        "lib/net40/Microsoft.ApplicationInsights.XML",
+        "lib/net45/Microsoft.ApplicationInsights.dll",
+        "lib/net45/Microsoft.ApplicationInsights.XML",
+        "lib/wp8/Microsoft.ApplicationInsights.dll",
+        "lib/wp8/Microsoft.ApplicationInsights.XML",
+        "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll",
+        "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.XML",
+        "package/services/metadata/core-properties/da5f06b2e3b04210bf9a363361c5d800.psmdcp",
+        "[Content_Types].xml"
+      ]
+    },
     "Microsoft.CSharp/4.0.0": {
       "sha512": "oWqeKUxHXdK6dL2CFjgMcaBISbkk+AqEg+yvJHE4DElNzS4QaTsCflgkkqZwVlWby1Dg9zo9n+iCAMFefFdJ/A==",
       "type": "Package",
